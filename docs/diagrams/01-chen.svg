@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1540" viewBox="0 0 1600 1540"><rect width="100%" height="100%" fill="white"/>
+<text x="800.0" y="43.0" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">Информационная модель — Чен</text>
+<polyline points="390,255 650,255" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="870,255 1120,255" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="760,201.0 870.0,255 760,309.0 650.0,255" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="760" y="255.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">содержит</text>
+<text x="470" y="235.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">1</text>
+<text x="1030" y="235.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">N</text>
+<polyline points="245,300 245,428" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="245,532 245,680" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="245,428.0 350.0,480 245,532.0 140.0,480" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="245" y="480.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">регистрирует</text>
+<text x="265" y="350.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">1</text>
+<text x="265" y="625.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">N</text>
+<polyline points="1300,300 1300,428" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1300,532 1300,680" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1300,428.0 1405.0,480 1300,532.0 1195.0,480" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="1300" y="480.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">включает</text>
+<text x="1325" y="350.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">M</text>
+<text x="1325" y="625.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">N</text>
+<polyline points="390,700 530,700 530,480 650,480" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="870,480 1010,480 1010,280 1120,280" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="760,426.0 870.0,480 760,534.0 650.0,480" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="760" y="480.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">использует</text>
+<text x="455" y="678.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">N</text>
+<text x="1060" y="308.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">1</text>
+<polyline points="245,770 245,908" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="245,1012 245,1160" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="245,908.0 350.0,960 245,1012.0 140.0,960" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="245" y="960.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">дает</text>
+<text x="268" y="805.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">1</text>
+<text x="268" y="1110.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">1</text>
+<polyline points="1300,770 1300,908" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1300,1012 1300,1160" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1300,908.0 1405.0,960 1300,1012.0 1195.0,960" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="1300" y="960.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">входит в</text>
+<text x="1325" y="805.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">M</text>
+<text x="1325" y="1110.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">N</text>
+<polyline points="390,1205 650,1205" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="870,1205 1120,1205" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="760,1151.0 870.0,1205 760,1259.0 650.0,1205" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="760" y="1205.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">содержит</text>
+<text x="470" y="1183.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">1</text>
+<text x="1030" y="1183.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">N</text>
+<polyline points="180,210 150,145" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="150.0" cy="145.0" rx="90.0" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="150" y="145.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central" text-decoration="underline">experimentId</text>
+<polyline points="350,210 420,145" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="420.0" cy="145.0" rx="105.0" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="420" y="145.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">название</text>
+<polyline points="1200,210 1150,145" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="1150.0" cy="145.0" rx="100.0" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="1150" y="145.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central" text-decoration="underline">snapshotId</text>
+<polyline points="1420,210 1440,145" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="1440.0" cy="145.0" rx="95.0" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="1440" y="145.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">версия</text>
+<polyline points="150,770 110,850" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="110.0" cy="850.0" rx="85.0" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="110" y="850.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central" text-decoration="underline">runId</text>
+<polyline points="360,770 445,850" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="445.0" cy="850.0" rx="135.0" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="445" y="850.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">конфигурация</text>
+<polyline points="1180,770 1090,850" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="1090.0" cy="850.0" rx="95.0" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="1090" y="850.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central" text-decoration="underline">valueId</text>
+<polyline points="1420,770 1465,850" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="1465.0" cy="850.0" rx="112.5" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="1465" y="850.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">представление</text>
+<polyline points="150,1250 110,1330" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="110.0" cy="1330.0" rx="92.5" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="110" y="1330.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central" text-decoration="underline">resultId</text>
+<polyline points="360,1250 445,1330" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="445.0" cy="1330.0" rx="135.0" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="445" y="1330.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">содержимое</text>
+<polyline points="1180,1250 1110,1330" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="1110.0" cy="1330.0" rx="95.0" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="1110" y="1330.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central" text-decoration="underline">clusterId</text>
+<polyline points="1420,1250 1430,1330" fill="none" stroke="#19334c" stroke-width="2"/>
+<ellipse cx="1430.0" cy="1330.0" rx="105.0" ry="27.0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="1430" y="1330.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">номер</text>
+<rect x="100" y="210" width="290" height="90" rx="0" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<text x="245.0" y="255.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">Эксперимент</text>
+<rect x="1120" y="210" width="360" height="90" rx="0" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<text x="1300.0" y="255.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">Снимок набора</text>
+<rect x="100" y="680" width="290" height="90" rx="0" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<text x="245.0" y="725.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">Запуск</text>
+<rect x="1120" y="680" width="360" height="90" rx="0" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<text x="1300.0" y="725.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">Запись величины</text>
+<rect x="100" y="1160" width="290" height="90" rx="0" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<text x="245.0" y="1205.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">Результат</text>
+<rect x="1120" y="1160" width="360" height="90" rx="0" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<text x="1300.0" y="1205.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">Кластер</text>
+<text x="800" y="1435.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Прямоугольник — сущность; ромб — связь; овал — атрибут; подчеркнуто — ключ.</text>
+<text x="800" y="1474.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#526273" text-anchor="middle" dominant-baseline="central">1 / M / N — максимальная кратность. Обязательность и ограничения — в описании данных.</text>
+</svg>

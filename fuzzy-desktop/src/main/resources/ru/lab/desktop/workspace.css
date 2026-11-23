@@ -1,0 +1,76 @@
+.root {
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+    -fx-text-fill: #20304a;
+    -fx-accent: #3866a6;
+    -fx-focus-color: #3866a6;
+    -fx-faint-focus-color: #3866a622;
+}
+
+.workspace {
+    -fx-background-color: #f5f7fb;
+}
+
+.sidebar {
+    -fx-min-width: 220px;
+    -fx-pref-width: 220px;
+    -fx-padding: 32px 18px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent #e2e8f0 transparent transparent;
+}
+
+.brand {
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #244a7c;
+    -fx-padding: 0 10px 34px 10px;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 13px 16px;
+    -fx-alignment: center-left;
+    -fx-text-fill: #56657b;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #f1f5fa;
+}
+
+.nav-button:active {
+    -fx-background-color: #e7effa;
+    -fx-text-fill: #2d5d99;
+    -fx-font-weight: bold;
+}
+
+.nav-button:focused {
+    -fx-border-color: #7699c6;
+}
+
+.content {
+    -fx-padding: 36px 40px;
+}
+
+.section-title {
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #20304a;
+}
+
+.empty-state {
+    -fx-padding: 30px;
+}
+
+.empty-title {
+    -fx-font-size: 21px;
+    -fx-text-fill: #425572;
+    -fx-text-alignment: center;
+}
+
+.empty-description {
+    -fx-text-fill: #697b94;
+    -fx-text-alignment: center;
+}

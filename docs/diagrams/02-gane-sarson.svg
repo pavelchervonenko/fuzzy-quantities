@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2240" viewBox="0 0 1800 2240"><rect width="100%" height="100%" fill="white"/>
+<text x="900.0" y="43.0" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">Функции и потоки данных — Гейн–Сарсон</text>
+<rect x="45" y="194" width="255" height="110" rx="0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="172" y="221.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">E1</text>
+<text x="172" y="265.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Потребитель</text>
+<rect x="650" y="178" width="400" height="140" rx="16" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<polyline points="650,214 1050,214" fill="none" stroke="#245e9b" stroke-width="2"/>
+<text x="850.0" y="196.0" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">1.0</text>
+<text x="850.0" y="250.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Задать и изменить</text>
+<text x="850.0" y="282.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">нечеткие величины</text>
+<polyline points="1740,176 1330,176 1330,240 1740,240" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,176 1392,240" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="208.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D1</text>
+<text x="1566.0" y="208.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Эксперимент</text>
+<polyline points="1740,347 1330,347 1330,411 1740,411" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,347 1392,411" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="379.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D2</text>
+<text x="1566.0" y="379.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Журнал</text>
+<polyline points="300,223 650,223" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="650,223 638.12984377594,228.3008858897744 638.12984377594,217.6991141102256" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="359.5" y="179.0" width="231.0" height="26.0" fill="white"/>
+<text x="475" y="190.0" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">параметры / правки</text>
+<polyline points="650,287 300,287" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="300,287 311.87015622406,281.6991141102256 311.87015622406,292.3008858897744" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="364.0" y="318.0" width="222.0" height="24.5" fill="white"/>
+<text x="475" y="330.0" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">величины / ошибки</text>
+<polyline points="1330,193 1050,193" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1050,193 1061.87015622406,187.6991141102256 1061.87015622406,198.3008858897744" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="1140.5" y="135.7" width="99.5" height="21.5" fill="white"/>
+<text x="1190" y="143.2" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">текущее</text>
+<rect x="1131.5" y="161.3" width="116.5" height="17.5" fill="white"/>
+<text x="1190" y="168.8" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">состояние</text>
+<polyline points="1050,270 1200,270 1200,225 1330,225" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1330,225 1318.12984377594,230.3008858897744 1318.12984377594,219.6991141102256" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="1115.5" y="281.7" width="149.0" height="21.5" fill="white"/>
+<text x="1190" y="293.2" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">обновленные</text>
+<rect x="1134.0" y="311.3" width="111.5" height="17.5" fill="white"/>
+<text x="1190" y="318.8" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">величины</text>
+<polyline points="850,318 850,379 1330,379" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1330,379 1318.12984377594,384.3008858897744 1318.12984377594,373.6991141102256" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="908.0" y="350.5" width="344.0" height="20.5" fill="white"/>
+<text x="1080" y="358.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">запись: входы, исход, значения</text>
+<rect x="45" y="514" width="255" height="110" rx="0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="172" y="541.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">E1</text>
+<text x="172" y="585.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Потребитель</text>
+<rect x="650" y="498" width="400" height="140" rx="16" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<polyline points="650,534 1050,534" fill="none" stroke="#245e9b" stroke-width="2"/>
+<text x="850.0" y="516.0" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">2.0</text>
+<text x="850.0" y="570.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Сгенерировать</text>
+<text x="850.0" y="602.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">числа или набор</text>
+<polyline points="1740,496 1330,496 1330,560 1740,560" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,496 1392,560" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="528.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D1</text>
+<text x="1566.0" y="528.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Эксперимент</text>
+<polyline points="1740,667 1330,667 1330,731 1740,731" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,667 1392,731" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="699.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D2</text>
+<text x="1566.0" y="699.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Журнал</text>
+<polyline points="300,543 650,543" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="650,543 638.12984377594,548.3008858897745 638.12984377594,537.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="362.5" y="485.56" width="225.0" height="26.0" fill="white"/>
+<text x="475" y="496.56" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">режим / диапазоны</text>
+<rect x="392.5" y="511.94000000000005" width="165.0" height="24.0" fill="white"/>
+<text x="475" y="523.44" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">число N / seed</text>
+<polyline points="650,607 300,607" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="300,607 311.87015622406,601.6991141102255 311.87015622406,612.3008858897745" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="364.5" y="624.56" width="221.5" height="27.0" fill="white"/>
+<text x="475" y="636.56" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">выборка или набор</text>
+<rect x="428.5" y="651.44" width="93.0" height="22.5" fill="white"/>
+<text x="475" y="663.44" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">ошибки</text>
+<polyline points="1330,513 1050,513" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1050,513 1061.87015622406,507.6991141102256 1061.87015622406,518.3008858897745" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="1127.0" y="455.7" width="126.0" height="21.5" fill="white"/>
+<text x="1190" y="463.2" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">параметры</text>
+<rect x="1134.0" y="481.3" width="111.5" height="17.5" fill="white"/>
+<text x="1190" y="488.8" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">величины</text>
+<polyline points="1050,590 1200,590 1200,545 1330,545" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1330,545 1318.12984377594,550.3008858897745 1318.12984377594,539.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="1136.0" y="605.7" width="107.5" height="20.5" fill="white"/>
+<text x="1190" y="613.2" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">данные и</text>
+<rect x="1106.5" y="627.8" width="167.0" height="21.0" fill="white"/>
+<text x="1190" y="638.8" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">контекст PRNG</text>
+<polyline points="850,638 850,699 1330,699" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1330,699 1318.12984377594,704.3008858897745 1318.12984377594,693.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="908.0" y="670.5" width="344.0" height="20.5" fill="white"/>
+<text x="1080" y="678.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">запись: входы, исход, значения</text>
+<rect x="45" y="834" width="255" height="110" rx="0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="172" y="861.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">E1</text>
+<text x="172" y="905.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Потребитель</text>
+<rect x="650" y="818" width="400" height="140" rx="16" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<polyline points="650,854 1050,854" fill="none" stroke="#245e9b" stroke-width="2"/>
+<text x="850.0" y="836.0" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">3.0</text>
+<text x="850.0" y="890.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Принадлежность,</text>
+<text x="850.0" y="922.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">арифметика и сравнение</text>
+<polyline points="1740,816 1330,816 1330,880 1740,880" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,816 1392,880" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="848.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D1</text>
+<text x="1566.0" y="848.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Эксперимент</text>
+<polyline points="1740,987 1330,987 1330,1051 1740,1051" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,987 1392,1051" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="1019.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D2</text>
+<text x="1566.0" y="1019.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Журнал</text>
+<polyline points="300,863 650,863" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="650,863 638.12984377594,868.3008858897745 638.12984377594,857.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="352.5" y="805.56" width="245.0" height="26.0" fill="white"/>
+<text x="475" y="816.56" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">операция / операнды</text>
+<rect x="399.5" y="832.44" width="151.5" height="26.0" fill="white"/>
+<text x="475" y="843.44" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">x / уровень α</text>
+<polyline points="650,927 300,927" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="300,927 311.87015622406,921.6991141102255 311.87015622406,932.3008858897745" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="373.5" y="945.56" width="203.5" height="26.0" fill="white"/>
+<text x="475" y="956.56" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">μ / сечение / ранг</text>
+<rect x="362.0" y="971.44" width="226.5" height="27.0" fill="white"/>
+<text x="475" y="983.44" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">результат / ошибки</text>
+<polyline points="1330,833 1050,833" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1050,833 1061.87015622406,827.6991141102255 1061.87015622406,838.3008858897745" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="1127.0" y="772.7" width="126.5" height="24.5" fill="white"/>
+<text x="1190" y="783.2" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">операнды /</text>
+<rect x="1130.5" y="797.3" width="119.0" height="25.5" fill="white"/>
+<text x="1190" y="808.8" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">настройки</text>
+<polyline points="1050,910 1200,910 1200,865 1330,865" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1330,865 1318.12984377594,870.3008858897745 1318.12984377594,859.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="1132.0" y="925.7" width="115.5" height="21.5" fill="white"/>
+<text x="1190" y="933.2" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">результат</text>
+<rect x="1144.5" y="951.3" width="91.0" height="21.5" fill="white"/>
+<text x="1190" y="958.8" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">запуска</text>
+<polyline points="850,958 850,1019 1330,1019" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1330,1019 1318.12984377594,1024.3008858897745 1318.12984377594,1013.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="908.0" y="990.5" width="344.0" height="20.5" fill="white"/>
+<text x="1080" y="998.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">запись: входы, исход, значения</text>
+<rect x="45" y="1154" width="255" height="110" rx="0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="172" y="1181.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">E1</text>
+<text x="172" y="1225.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Потребитель</text>
+<rect x="650" y="1138" width="400" height="140" rx="16" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<polyline points="650,1174 1050,1174" fill="none" stroke="#245e9b" stroke-width="2"/>
+<text x="850.0" y="1156.0" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">4.0</text>
+<text x="850.0" y="1210.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Кластеризовать</text>
+<text x="850.0" y="1242.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">набор</text>
+<polyline points="1740,1136 1330,1136 1330,1200 1740,1200" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,1136 1392,1200" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="1168.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D1</text>
+<text x="1566.0" y="1168.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Эксперимент</text>
+<polyline points="1740,1307 1330,1307 1330,1371 1740,1371" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,1307 1392,1371" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="1339.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D2</text>
+<text x="1566.0" y="1339.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Журнал</text>
+<polyline points="300,1183 650,1183" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="650,1183 638.12984377594,1188.3008858897745 638.12984377594,1177.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="375.0" y="1124.56" width="199.5" height="27.0" fill="white"/>
+<text x="475" y="1136.56" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">набор / критерий</text>
+<rect x="376.0" y="1152.44" width="198.0" height="26.0" fill="white"/>
+<text x="475" y="1163.44" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">α / число групп K</text>
+<polyline points="650,1247 300,1247" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="300,1247 311.87015622406,1241.6991141102255 311.87015622406,1252.3008858897745" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="363.0" y="1265.56" width="224.0" height="26.0" fill="white"/>
+<text x="475" y="1276.56" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">кластеры / история</text>
+<rect x="434.5" y="1295.94" width="81.0" height="22.5" fill="white"/>
+<text x="475" y="1303.44" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">статус</text>
+<polyline points="1330,1153 1050,1153" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1050,1153 1061.87015622406,1147.6991141102255 1061.87015622406,1158.3008858897745" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="1141.0" y="1092.7" width="98.0" height="22.5" fill="white"/>
+<text x="1190" y="1103.2" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">снимок /</text>
+<rect x="1130.5" y="1117.3" width="119.0" height="25.5" fill="white"/>
+<text x="1190" y="1128.8" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">настройки</text>
+<polyline points="1050,1230 1200,1230 1200,1185 1330,1185" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1330,1185 1318.12984377594,1190.3008858897745 1318.12984377594,1179.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="1132.0" y="1245.7" width="115.5" height="21.5" fill="white"/>
+<text x="1190" y="1253.2" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">результат</text>
+<rect x="1106.0" y="1271.3" width="168.5" height="21.5" fill="white"/>
+<text x="1190" y="1278.8" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">кластеризации</text>
+<polyline points="850,1278 850,1339 1330,1339" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1330,1339 1318.12984377594,1344.3008858897745 1318.12984377594,1333.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="908.0" y="1310.5" width="344.0" height="20.5" fill="white"/>
+<text x="1080" y="1318.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">запись: входы, исход, значения</text>
+<rect x="45" y="1474" width="255" height="110" rx="0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="172" y="1501.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">E1</text>
+<text x="172" y="1545.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Потребитель</text>
+<rect x="650" y="1458" width="400" height="140" rx="16" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<polyline points="650,1494 1050,1494" fill="none" stroke="#245e9b" stroke-width="2"/>
+<text x="850.0" y="1476.0" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">5.0</text>
+<text x="850.0" y="1530.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Сохранить, загрузить</text>
+<text x="850.0" y="1562.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">или экспортировать</text>
+<polyline points="1740,1456 1330,1456 1330,1520 1740,1520" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,1456 1392,1520" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="1488.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D1</text>
+<text x="1566.0" y="1488.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Эксперимент</text>
+<polyline points="1740,1627 1330,1627 1330,1691 1740,1691" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,1627 1392,1691" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="1659.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D2</text>
+<text x="1566.0" y="1659.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Журнал</text>
+<polyline points="300,1503 650,1503" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="650,1503 638.12984377594,1508.3008858897745 638.12984377594,1497.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="383.5" y="1444.56" width="183.0" height="27.0" fill="white"/>
+<text x="475" y="1456.56" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">действие / путь</text>
+<rect x="428.5" y="1471.94" width="93.0" height="26.5" fill="white"/>
+<text x="475" y="1483.44" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">формат</text>
+<polyline points="650,1567 300,1567" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="300,1567 311.87015622406,1561.6991141102255 311.87015622406,1572.3008858897745" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="329.5" y="1585.56" width="291.5" height="26.0" fill="white"/>
+<text x="475" y="1596.56" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">данные / подтверждение</text>
+<rect x="428.5" y="1611.44" width="93.0" height="22.5" fill="white"/>
+<text x="475" y="1623.44" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">ошибки</text>
+<polyline points="1330,1473 1050,1473" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1050,1473 1061.87015622406,1467.6991141102255 1061.87015622406,1478.3008858897745" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="1148.0" y="1415.7" width="84.5" height="17.5" fill="white"/>
+<text x="1190" y="1423.2" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">снимок</text>
+<rect x="1111.0" y="1441.3" width="157.5" height="21.5" fill="white"/>
+<text x="1190" y="1448.8" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">эксперимента</text>
+<polyline points="1050,1550 1200,1550 1200,1505 1330,1505" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1330,1505 1318.12984377594,1510.3008858897745 1318.12984377594,1499.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="1094.5" y="1565.7" width="191.0" height="17.5" fill="white"/>
+<text x="1190" y="1573.2" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">восстановленное</text>
+<rect x="1131.5" y="1591.3" width="116.5" height="17.5" fill="white"/>
+<text x="1190" y="1598.8" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">состояние</text>
+<polyline points="850,1598 850,1659 1330,1659" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1330,1659 1318.12984377594,1664.3008858897745 1318.12984377594,1653.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="908.0" y="1630.5" width="344.0" height="20.5" fill="white"/>
+<text x="1080" y="1638.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">запись: входы, исход, значения</text>
+<polyline points="1740,1744 1330,1744 1330,1808 1740,1808" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,1744 1392,1808" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="1776.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D3</text>
+<text x="1566.0" y="1776.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Файлы JSON / CSV</text>
+<polyline points="740,1598 740,1764 1330,1764" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1330,1764 1318.12984377594,1769.3008858897745 1318.12984377594,1758.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="938.0" y="1729.0" width="243.0" height="25.0" fill="white"/>
+<text x="1060" y="1740.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">JSON / CSV для записи</text>
+<polyline points="1330,1793 680,1793 680,1598" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="680,1598 685.3008858897745,1609.87015622406 674.6991141102255,1609.87015622406" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="957.5" y="1806.0" width="204.0" height="25.0" fill="white"/>
+<text x="1060" y="1817.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">JSON для загрузки</text>
+<rect x="45" y="1924" width="255" height="110" rx="0" fill="white" stroke="#19334c" stroke-width="2"/>
+<text x="172" y="1951.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">E1</text>
+<text x="172" y="1995.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Потребитель</text>
+<rect x="650" y="1908" width="400" height="140" rx="16" fill="#edf5fc" stroke="#245e9b" stroke-width="2"/>
+<polyline points="650,1944 1050,1944" fill="none" stroke="#245e9b" stroke-width="2"/>
+<text x="850.0" y="1926.0" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">6.0</text>
+<text x="850.0" y="1996.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Прочитать журнал</text>
+<polyline points="1740,1906 1330,1906 1330,1970 1740,1970" fill="none" stroke="#19334c" stroke-width="2"/>
+<polyline points="1392,1906 1392,1970" fill="none" stroke="#19334c" stroke-width="2"/>
+<text x="1361" y="1938.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#19334c" text-anchor="middle" dominant-baseline="central">D2</text>
+<text x="1566.0" y="1938.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">Журнал</text>
+<polyline points="300,1953 650,1953" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="650,1953 638.12984377594,1958.3008858897745 638.12984377594,1947.6991141102255" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="370.5" y="1908.5" width="209.0" height="26.5" fill="white"/>
+<text x="475" y="1920.0" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">период / фильтры</text>
+<polyline points="650,2017 300,2017" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="300,2017 311.87015622406,2011.6991141102255 311.87015622406,2022.3008858897745" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="380.0" y="2048.0" width="190.0" height="24.5" fill="white"/>
+<text x="475" y="2060.0" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">записи / ошибки</text>
+<polyline points="1330,1938 1050,1938" fill="none" stroke="#19334c" stroke-width="2"/>
+<polygon points="1050,1938 1061.87015622406,1932.6991141102255 1061.87015622406,1943.3008858897745" fill="#19334c" stroke="#19334c" stroke-width="1"/>
+<rect x="1100.0" y="1898.5" width="180.5" height="21.5" fill="white"/>
+<text x="1190" y="1906.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">записи журнала</text>
+<text x="900" y="2160.0" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19334c" text-anchor="middle" dominant-baseline="central">E1 — JavaFX или Java-клиент. D1 — состояние в памяти; D2 и D3 — файлы.</text>
+<text x="900" y="2196.0" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#526273" text-anchor="middle" dominant-baseline="central">Повторы E1, D1 и D2 обозначают те же объекты. Стрелки передают данные, а не порядок шагов.</text>
+</svg>

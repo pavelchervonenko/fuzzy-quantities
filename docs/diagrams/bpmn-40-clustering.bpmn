@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="P4_definitions" targetNamespace="https://student-lab.local/design" exporter="Student Lab design tools">
+  <bpmn:collaboration id="P4_collaboration">
+    <bpmn:participant id="P4_participant" name="Student Lab" processRef="P4_process" />
+  </bpmn:collaboration>
+  <bpmn:process id="P4_process" name="Кластеризовать набор" isExecutable="false">
+    <bpmn:documentation>Descriptive model; see docs/processes.md for contracts and handled outcomes.</bpmn:documentation>
+    <bpmn:startEvent id="P4_start" name="Запрос получен">
+      <bpmn:outgoing>P4_f1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="P4_prepare" name="Зафиксировать снимок, критерий, α и K Проверить набор и настройки">
+      <bpmn:incoming>P4_f1</bpmn:incoming>
+      <bpmn:outgoing>P4_f2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="P4_valid" name="Входы допустимы?" gatewayDirection="Diverging">
+      <bpmn:incoming>P4_f2</bpmn:incoming>
+      <bpmn:outgoing>P4_f3</bpmn:outgoing>
+      <bpmn:outgoing>P4_f5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="P4_status" name="Исход выполнения" gatewayDirection="Diverging">
+      <bpmn:incoming>P4_f4</bpmn:incoming>
+      <bpmn:outgoing>P4_f6</bpmn:outgoing>
+      <bpmn:outgoing>P4_f7</bpmn:outgoing>
+      <bpmn:outgoing>P4_f10</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="P4_work" name="Получить сечения и расстояния Объединять ближайшие группы до K Проверить разбиение; учитывать отмену">
+      <bpmn:incoming>P4_f3</bpmn:incoming>
+      <bpmn:outgoing>P4_f4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P4_success" name="Подготовить разбиение и привязку к снимку">
+      <bpmn:incoming>P4_f6</bpmn:incoming>
+      <bpmn:outgoing>P4_f8</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P4_failure" name="Подготовить ошибку без успешного результата">
+      <bpmn:incoming>P4_f5</bpmn:incoming>
+      <bpmn:incoming>P4_f7</bpmn:incoming>
+      <bpmn:outgoing>P4_f9</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="P4_outcome_merge" name="" gatewayDirection="Converging">
+      <bpmn:incoming>P4_f8</bpmn:incoming>
+      <bpmn:incoming>P4_f9</bpmn:incoming>
+      <bpmn:incoming>P4_f11</bpmn:incoming>
+      <bpmn:outgoing>P4_f12</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="P4_cancel" name="Подготовить ответ об отмене Отбросить незавершённые данные">
+      <bpmn:incoming>P4_f10</bpmn:incoming>
+      <bpmn:outgoing>P4_f11</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P4_log" name="Записать входы, исход и значения в журнал При сбое добавить предупреждение">
+      <bpmn:incoming>P4_f12</bpmn:incoming>
+      <bpmn:outgoing>P4_f13</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P4_return" name="Вернуть ответ потребителю">
+      <bpmn:incoming>P4_f13</bpmn:incoming>
+      <bpmn:outgoing>P4_f14</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="P4_end" name="Запрос завершён">
+      <bpmn:incoming>P4_f14</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="P4_f1" name="" sourceRef="P4_start" targetRef="P4_prepare" />
+    <bpmn:sequenceFlow id="P4_f2" name="" sourceRef="P4_prepare" targetRef="P4_valid" />
+    <bpmn:sequenceFlow id="P4_f3" name="да" sourceRef="P4_valid" targetRef="P4_work" />
+    <bpmn:sequenceFlow id="P4_f4" name="" sourceRef="P4_work" targetRef="P4_status" />
+    <bpmn:sequenceFlow id="P4_f5" name="нет" sourceRef="P4_valid" targetRef="P4_failure" />
+    <bpmn:sequenceFlow id="P4_f6" name="успех" sourceRef="P4_status" targetRef="P4_success" />
+    <bpmn:sequenceFlow id="P4_f7" name="ошибка" sourceRef="P4_status" targetRef="P4_failure" />
+    <bpmn:sequenceFlow id="P4_f8" name="" sourceRef="P4_success" targetRef="P4_outcome_merge" />
+    <bpmn:sequenceFlow id="P4_f9" name="" sourceRef="P4_failure" targetRef="P4_outcome_merge" />
+    <bpmn:sequenceFlow id="P4_f10" name="отмена" sourceRef="P4_status" targetRef="P4_cancel" />
+    <bpmn:sequenceFlow id="P4_f11" name="" sourceRef="P4_cancel" targetRef="P4_outcome_merge" />
+    <bpmn:sequenceFlow id="P4_f12" name="" sourceRef="P4_outcome_merge" targetRef="P4_log" />
+    <bpmn:sequenceFlow id="P4_f13" name="" sourceRef="P4_log" targetRef="P4_return" />
+    <bpmn:sequenceFlow id="P4_f14" name="" sourceRef="P4_return" targetRef="P4_end" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="P4_diagram">
+    <bpmndi:BPMNPlane id="P4_plane" bpmnElement="P4_collaboration">
+      <bpmndi:BPMNShape id="P4_participant_di" bpmnElement="P4_participant" isHorizontal="false">
+        <dc:Bounds x="45" y="120" width="1510" height="1730" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_start_di" bpmnElement="P4_start">
+        <dc:Bounds x="778" y="190" width="44" height="44" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="805" y="198" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_prepare_di" bpmnElement="P4_prepare">
+        <dc:Bounds x="500" y="280" width="600" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_valid_di" bpmnElement="P4_valid" isMarkerVisible="true">
+        <dc:Bounds x="760" y="450" width="80" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="890" y="441" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_status_di" bpmnElement="P4_status" isMarkerVisible="true">
+        <dc:Bounds x="760" y="920" width="80" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="890" y="901" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_work_di" bpmnElement="P4_work">
+        <dc:Bounds x="500" y="650" width="600" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_success_di" bpmnElement="P4_success">
+        <dc:Bounds x="115" y="1125" width="410" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_failure_di" bpmnElement="P4_failure">
+        <dc:Bounds x="1075" y="1125" width="410" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_outcome_merge_di" bpmnElement="P4_outcome_merge" isMarkerVisible="true">
+        <dc:Bounds x="760" y="1315" width="80" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_cancel_di" bpmnElement="P4_cancel">
+        <dc:Bounds x="595" y="1125" width="410" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_log_di" bpmnElement="P4_log">
+        <dc:Bounds x="500" y="1455" width="600" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_return_di" bpmnElement="P4_return">
+        <dc:Bounds x="500" y="1610" width="600" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P4_end_di" bpmnElement="P4_end">
+        <dc:Bounds x="778" y="1780" width="44" height="44" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="820" y="1788" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="P4_f1_di" bpmnElement="P4_f1">
+        <di:waypoint x="800" y="234" />
+        <di:waypoint x="800" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f2_di" bpmnElement="P4_f2">
+        <di:waypoint x="800" y="400" />
+        <di:waypoint x="800" y="450" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f3_di" bpmnElement="P4_f3">
+        <di:waypoint x="800" y="530" />
+        <di:waypoint x="800" y="650" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="675" y="571" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f4_di" bpmnElement="P4_f4">
+        <di:waypoint x="800" y="770" />
+        <di:waypoint x="800" y="920" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f5_di" bpmnElement="P4_f5">
+        <di:waypoint x="840" y="490" />
+        <di:waypoint x="1530" y="490" />
+        <di:waypoint x="1530" y="1185" />
+        <di:waypoint x="1485" y="1185" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1270" y="451" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f6_di" bpmnElement="P4_f6">
+        <di:waypoint x="760" y="960" />
+        <di:waypoint x="320" y="960" />
+        <di:waypoint x="320" y="1125" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="380" y="921" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f7_di" bpmnElement="P4_f7">
+        <di:waypoint x="840" y="960" />
+        <di:waypoint x="1280" y="960" />
+        <di:waypoint x="1280" y="1125" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="910" y="981" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f8_di" bpmnElement="P4_f8">
+        <di:waypoint x="320" y="1245" />
+        <di:waypoint x="320" y="1355" />
+        <di:waypoint x="760" y="1355" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f9_di" bpmnElement="P4_f9">
+        <di:waypoint x="1280" y="1245" />
+        <di:waypoint x="1280" y="1355" />
+        <di:waypoint x="840" y="1355" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f10_di" bpmnElement="P4_f10">
+        <di:waypoint x="800" y="1000" />
+        <di:waypoint x="800" y="1125" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="685" y="1046" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f11_di" bpmnElement="P4_f11">
+        <di:waypoint x="800" y="1245" />
+        <di:waypoint x="800" y="1315" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f12_di" bpmnElement="P4_f12">
+        <di:waypoint x="800" y="1395" />
+        <di:waypoint x="800" y="1455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f13_di" bpmnElement="P4_f13">
+        <di:waypoint x="800" y="1575" />
+        <di:waypoint x="800" y="1610" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P4_f14_di" bpmnElement="P4_f14">
+        <di:waypoint x="800" y="1730" />
+        <di:waypoint x="800" y="1780" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="P3_definitions" targetNamespace="https://student-lab.local/design" exporter="Student Lab design tools">
+  <bpmn:collaboration id="P3_collaboration">
+    <bpmn:participant id="P3_participant" name="Student Lab" processRef="P3_process" />
+  </bpmn:collaboration>
+  <bpmn:process id="P3_process" name="Исследовать и выполнить операции" isExecutable="false">
+    <bpmn:documentation>Descriptive model; see docs/processes.md for contracts and handled outcomes.</bpmn:documentation>
+    <bpmn:startEvent id="P3_start" name="Запрос получен">
+      <bpmn:outgoing>P3_f1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="P3_prepare" name="Зафиксировать операнды и действие Проверить входы и допустимость деления">
+      <bpmn:incoming>P3_f1</bpmn:incoming>
+      <bpmn:outgoing>P3_f2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="P3_valid" name="Входы допустимы?" gatewayDirection="Diverging">
+      <bpmn:incoming>P3_f2</bpmn:incoming>
+      <bpmn:outgoing>P3_f3</bpmn:outgoing>
+      <bpmn:outgoing>P3_f11</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="P3_status" name="Исход выполнения" gatewayDirection="Diverging">
+      <bpmn:incoming>P3_f10</bpmn:incoming>
+      <bpmn:outgoing>P3_f12</bpmn:outgoing>
+      <bpmn:outgoing>P3_f13</bpmn:outgoing>
+      <bpmn:outgoing>P3_f16</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="P3_mode" name="Выбранное действие" gatewayDirection="Diverging">
+      <bpmn:incoming>P3_f3</bpmn:incoming>
+      <bpmn:outgoing>P3_f4</bpmn:outgoing>
+      <bpmn:outgoing>P3_f6</bpmn:outgoing>
+      <bpmn:outgoing>P3_f8</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="P3_choice_merge" name="" gatewayDirection="Converging">
+      <bpmn:incoming>P3_f5</bpmn:incoming>
+      <bpmn:incoming>P3_f7</bpmn:incoming>
+      <bpmn:incoming>P3_f9</bpmn:incoming>
+      <bpmn:outgoing>P3_f10</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="P3_work1" name="Вычислить μ(x) или α-сечение">
+      <bpmn:incoming>P3_f4</bpmn:incoming>
+      <bpmn:outgoing>P3_f5</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P3_work2" name="Вычислить +, −, × или ÷ на общей сетке α Проверить итоговые сечения">
+      <bpmn:incoming>P3_f6</bpmn:incoming>
+      <bpmn:outgoing>P3_f7</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P3_work3" name="Вычислить ранги на общей сетке α Сравнить ранги">
+      <bpmn:incoming>P3_f8</bpmn:incoming>
+      <bpmn:outgoing>P3_f9</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P3_success" name="Подготовить значение, сечение, табличную величину или сравнение">
+      <bpmn:incoming>P3_f12</bpmn:incoming>
+      <bpmn:outgoing>P3_f14</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P3_failure" name="Подготовить ошибку без успешного результата">
+      <bpmn:incoming>P3_f11</bpmn:incoming>
+      <bpmn:incoming>P3_f13</bpmn:incoming>
+      <bpmn:outgoing>P3_f15</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="P3_outcome_merge" name="" gatewayDirection="Converging">
+      <bpmn:incoming>P3_f14</bpmn:incoming>
+      <bpmn:incoming>P3_f15</bpmn:incoming>
+      <bpmn:incoming>P3_f17</bpmn:incoming>
+      <bpmn:outgoing>P3_f18</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="P3_cancel" name="Подготовить ответ об отмене Отбросить незавершённые данные">
+      <bpmn:incoming>P3_f16</bpmn:incoming>
+      <bpmn:outgoing>P3_f17</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P3_log" name="Записать входы, исход и значения в журнал При сбое добавить предупреждение">
+      <bpmn:incoming>P3_f18</bpmn:incoming>
+      <bpmn:outgoing>P3_f19</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P3_return" name="Вернуть ответ потребителю">
+      <bpmn:incoming>P3_f19</bpmn:incoming>
+      <bpmn:outgoing>P3_f20</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="P3_end" name="Запрос завершён">
+      <bpmn:incoming>P3_f20</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="P3_f1" name="" sourceRef="P3_start" targetRef="P3_prepare" />
+    <bpmn:sequenceFlow id="P3_f2" name="" sourceRef="P3_prepare" targetRef="P3_valid" />
+    <bpmn:sequenceFlow id="P3_f3" name="да" sourceRef="P3_valid" targetRef="P3_mode" />
+    <bpmn:sequenceFlow id="P3_f4" name="принадлежность / сечение" sourceRef="P3_mode" targetRef="P3_work1" />
+    <bpmn:sequenceFlow id="P3_f5" name="" sourceRef="P3_work1" targetRef="P3_choice_merge" />
+    <bpmn:sequenceFlow id="P3_f6" name="арифметика" sourceRef="P3_mode" targetRef="P3_work2" />
+    <bpmn:sequenceFlow id="P3_f7" name="" sourceRef="P3_work2" targetRef="P3_choice_merge" />
+    <bpmn:sequenceFlow id="P3_f8" name="сравнение" sourceRef="P3_mode" targetRef="P3_work3" />
+    <bpmn:sequenceFlow id="P3_f9" name="" sourceRef="P3_work3" targetRef="P3_choice_merge" />
+    <bpmn:sequenceFlow id="P3_f10" name="" sourceRef="P3_choice_merge" targetRef="P3_status" />
+    <bpmn:sequenceFlow id="P3_f11" name="нет" sourceRef="P3_valid" targetRef="P3_failure" />
+    <bpmn:sequenceFlow id="P3_f12" name="успех" sourceRef="P3_status" targetRef="P3_success" />
+    <bpmn:sequenceFlow id="P3_f13" name="ошибка" sourceRef="P3_status" targetRef="P3_failure" />
+    <bpmn:sequenceFlow id="P3_f14" name="" sourceRef="P3_success" targetRef="P3_outcome_merge" />
+    <bpmn:sequenceFlow id="P3_f15" name="" sourceRef="P3_failure" targetRef="P3_outcome_merge" />
+    <bpmn:sequenceFlow id="P3_f16" name="отмена" sourceRef="P3_status" targetRef="P3_cancel" />
+    <bpmn:sequenceFlow id="P3_f17" name="" sourceRef="P3_cancel" targetRef="P3_outcome_merge" />
+    <bpmn:sequenceFlow id="P3_f18" name="" sourceRef="P3_outcome_merge" targetRef="P3_log" />
+    <bpmn:sequenceFlow id="P3_f19" name="" sourceRef="P3_log" targetRef="P3_return" />
+    <bpmn:sequenceFlow id="P3_f20" name="" sourceRef="P3_return" targetRef="P3_end" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="P3_diagram">
+    <bpmndi:BPMNPlane id="P3_plane" bpmnElement="P3_collaboration">
+      <bpmndi:BPMNShape id="P3_participant_di" bpmnElement="P3_participant" isHorizontal="false">
+        <dc:Bounds x="45" y="120" width="1510" height="1960" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_start_di" bpmnElement="P3_start">
+        <dc:Bounds x="778" y="190" width="44" height="44" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="805" y="198" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_prepare_di" bpmnElement="P3_prepare">
+        <dc:Bounds x="500" y="280" width="600" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_valid_di" bpmnElement="P3_valid" isMarkerVisible="true">
+        <dc:Bounds x="760" y="450" width="80" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="890" y="441" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_status_di" bpmnElement="P3_status" isMarkerVisible="true">
+        <dc:Bounds x="760" y="1150" width="80" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="890" y="1131" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_mode_di" bpmnElement="P3_mode" isMarkerVisible="true">
+        <dc:Bounds x="760" y="610" width="80" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="890" y="591" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_choice_merge_di" bpmnElement="P3_choice_merge" isMarkerVisible="true">
+        <dc:Bounds x="760" y="1010" width="80" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_work1_di" bpmnElement="P3_work1">
+        <dc:Bounds x="115" y="790" width="410" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_work2_di" bpmnElement="P3_work2">
+        <dc:Bounds x="595" y="790" width="410" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_work3_di" bpmnElement="P3_work3">
+        <dc:Bounds x="1075" y="790" width="410" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_success_di" bpmnElement="P3_success">
+        <dc:Bounds x="115" y="1355" width="410" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_failure_di" bpmnElement="P3_failure">
+        <dc:Bounds x="1075" y="1355" width="410" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_outcome_merge_di" bpmnElement="P3_outcome_merge" isMarkerVisible="true">
+        <dc:Bounds x="760" y="1545" width="80" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_cancel_di" bpmnElement="P3_cancel">
+        <dc:Bounds x="595" y="1355" width="410" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_log_di" bpmnElement="P3_log">
+        <dc:Bounds x="500" y="1685" width="600" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_return_di" bpmnElement="P3_return">
+        <dc:Bounds x="500" y="1840" width="600" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P3_end_di" bpmnElement="P3_end">
+        <dc:Bounds x="778" y="2010" width="44" height="44" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="820" y="2018" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="P3_f1_di" bpmnElement="P3_f1">
+        <di:waypoint x="800" y="234" />
+        <di:waypoint x="800" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f2_di" bpmnElement="P3_f2">
+        <di:waypoint x="800" y="400" />
+        <di:waypoint x="800" y="450" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f3_di" bpmnElement="P3_f3">
+        <di:waypoint x="800" y="530" />
+        <di:waypoint x="800" y="610" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="675" y="551" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f4_di" bpmnElement="P3_f4">
+        <di:waypoint x="760" y="650" />
+        <di:waypoint x="320" y="650" />
+        <di:waypoint x="320" y="790" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="370" y="611" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f5_di" bpmnElement="P3_f5">
+        <di:waypoint x="320" y="910" />
+        <di:waypoint x="320" y="1050" />
+        <di:waypoint x="760" y="1050" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f6_di" bpmnElement="P3_f6">
+        <di:waypoint x="800" y="690" />
+        <di:waypoint x="800" y="790" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="640" y="726" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f7_di" bpmnElement="P3_f7">
+        <di:waypoint x="800" y="910" />
+        <di:waypoint x="800" y="1010" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f8_di" bpmnElement="P3_f8">
+        <di:waypoint x="840" y="650" />
+        <di:waypoint x="1280" y="650" />
+        <di:waypoint x="1280" y="790" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="900" y="676" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f9_di" bpmnElement="P3_f9">
+        <di:waypoint x="1280" y="910" />
+        <di:waypoint x="1280" y="1050" />
+        <di:waypoint x="840" y="1050" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f10_di" bpmnElement="P3_f10">
+        <di:waypoint x="800" y="1090" />
+        <di:waypoint x="800" y="1150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f11_di" bpmnElement="P3_f11">
+        <di:waypoint x="840" y="490" />
+        <di:waypoint x="1530" y="490" />
+        <di:waypoint x="1530" y="1415" />
+        <di:waypoint x="1485" y="1415" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1270" y="451" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f12_di" bpmnElement="P3_f12">
+        <di:waypoint x="760" y="1190" />
+        <di:waypoint x="320" y="1190" />
+        <di:waypoint x="320" y="1355" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="380" y="1151" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f13_di" bpmnElement="P3_f13">
+        <di:waypoint x="840" y="1190" />
+        <di:waypoint x="1280" y="1190" />
+        <di:waypoint x="1280" y="1355" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="910" y="1211" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f14_di" bpmnElement="P3_f14">
+        <di:waypoint x="320" y="1475" />
+        <di:waypoint x="320" y="1585" />
+        <di:waypoint x="760" y="1585" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f15_di" bpmnElement="P3_f15">
+        <di:waypoint x="1280" y="1475" />
+        <di:waypoint x="1280" y="1585" />
+        <di:waypoint x="840" y="1585" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f16_di" bpmnElement="P3_f16">
+        <di:waypoint x="800" y="1230" />
+        <di:waypoint x="800" y="1355" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="685" y="1276" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f17_di" bpmnElement="P3_f17">
+        <di:waypoint x="800" y="1475" />
+        <di:waypoint x="800" y="1545" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f18_di" bpmnElement="P3_f18">
+        <di:waypoint x="800" y="1625" />
+        <di:waypoint x="800" y="1685" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f19_di" bpmnElement="P3_f19">
+        <di:waypoint x="800" y="1805" />
+        <di:waypoint x="800" y="1840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P3_f20_di" bpmnElement="P3_f20">
+        <di:waypoint x="800" y="1960" />
+        <di:waypoint x="800" y="2010" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

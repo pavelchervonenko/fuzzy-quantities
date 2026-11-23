@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="P6_definitions" targetNamespace="https://student-lab.local/design" exporter="Student Lab design tools">
+  <bpmn:collaboration id="P6_collaboration">
+    <bpmn:participant id="P6_participant" name="Student Lab" processRef="P6_process" />
+  </bpmn:collaboration>
+  <bpmn:process id="P6_process" name="Прочитать журнал" isExecutable="false">
+    <bpmn:documentation>Descriptive model; see docs/processes.md for contracts and handled outcomes.</bpmn:documentation>
+    <bpmn:startEvent id="P6_start" name="Запрос получен">
+      <bpmn:outgoing>P6_f1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="P6_prepare" name="Проверить период и фильтры Выбрать источник журнала">
+      <bpmn:incoming>P6_f1</bpmn:incoming>
+      <bpmn:outgoing>P6_f2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="P6_valid" name="Входы допустимы?" gatewayDirection="Diverging">
+      <bpmn:incoming>P6_f2</bpmn:incoming>
+      <bpmn:outgoing>P6_f3</bpmn:outgoing>
+      <bpmn:outgoing>P6_f5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="P6_status" name="Исход выполнения" gatewayDirection="Diverging">
+      <bpmn:incoming>P6_f4</bpmn:incoming>
+      <bpmn:outgoing>P6_f6</bpmn:outgoing>
+      <bpmn:outgoing>P6_f7</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="P6_work" name="Зафиксировать границу чтения Прочитать полные записи Применить фильтры">
+      <bpmn:incoming>P6_f3</bpmn:incoming>
+      <bpmn:outgoing>P6_f4</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P6_success" name="Подготовить список записей Пустой список допустим">
+      <bpmn:incoming>P6_f6</bpmn:incoming>
+      <bpmn:outgoing>P6_f8</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="P6_failure" name="Подготовить ошибку без успешного результата">
+      <bpmn:incoming>P6_f5</bpmn:incoming>
+      <bpmn:incoming>P6_f7</bpmn:incoming>
+      <bpmn:outgoing>P6_f9</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="P6_outcome_merge" name="" gatewayDirection="Converging">
+      <bpmn:incoming>P6_f8</bpmn:incoming>
+      <bpmn:incoming>P6_f9</bpmn:incoming>
+      <bpmn:outgoing>P6_f10</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="P6_return" name="Вернуть ответ потребителю">
+      <bpmn:incoming>P6_f10</bpmn:incoming>
+      <bpmn:outgoing>P6_f11</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="P6_end" name="Запрос завершён">
+      <bpmn:incoming>P6_f11</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="P6_f1" name="" sourceRef="P6_start" targetRef="P6_prepare" />
+    <bpmn:sequenceFlow id="P6_f2" name="" sourceRef="P6_prepare" targetRef="P6_valid" />
+    <bpmn:sequenceFlow id="P6_f3" name="да" sourceRef="P6_valid" targetRef="P6_work" />
+    <bpmn:sequenceFlow id="P6_f4" name="" sourceRef="P6_work" targetRef="P6_status" />
+    <bpmn:sequenceFlow id="P6_f5" name="нет" sourceRef="P6_valid" targetRef="P6_failure" />
+    <bpmn:sequenceFlow id="P6_f6" name="успех" sourceRef="P6_status" targetRef="P6_success" />
+    <bpmn:sequenceFlow id="P6_f7" name="ошибка" sourceRef="P6_status" targetRef="P6_failure" />
+    <bpmn:sequenceFlow id="P6_f8" name="" sourceRef="P6_success" targetRef="P6_outcome_merge" />
+    <bpmn:sequenceFlow id="P6_f9" name="" sourceRef="P6_failure" targetRef="P6_outcome_merge" />
+    <bpmn:sequenceFlow id="P6_f10" name="" sourceRef="P6_outcome_merge" targetRef="P6_return" />
+    <bpmn:sequenceFlow id="P6_f11" name="" sourceRef="P6_return" targetRef="P6_end" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="P6_diagram">
+    <bpmndi:BPMNPlane id="P6_plane" bpmnElement="P6_collaboration">
+      <bpmndi:BPMNShape id="P6_participant_di" bpmnElement="P6_participant" isHorizontal="false">
+        <dc:Bounds x="45" y="120" width="1510" height="1575" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P6_start_di" bpmnElement="P6_start">
+        <dc:Bounds x="778" y="190" width="44" height="44" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="805" y="198" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P6_prepare_di" bpmnElement="P6_prepare">
+        <dc:Bounds x="500" y="280" width="600" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P6_valid_di" bpmnElement="P6_valid" isMarkerVisible="true">
+        <dc:Bounds x="760" y="450" width="80" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="890" y="441" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P6_status_di" bpmnElement="P6_status" isMarkerVisible="true">
+        <dc:Bounds x="760" y="920" width="80" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="890" y="901" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P6_work_di" bpmnElement="P6_work">
+        <dc:Bounds x="500" y="650" width="600" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P6_success_di" bpmnElement="P6_success">
+        <dc:Bounds x="115" y="1125" width="410" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P6_failure_di" bpmnElement="P6_failure">
+        <dc:Bounds x="1075" y="1125" width="410" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P6_outcome_merge_di" bpmnElement="P6_outcome_merge" isMarkerVisible="true">
+        <dc:Bounds x="760" y="1315" width="80" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P6_return_di" bpmnElement="P6_return">
+        <dc:Bounds x="500" y="1455" width="600" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P6_end_di" bpmnElement="P6_end">
+        <dc:Bounds x="778" y="1625" width="44" height="44" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="820" y="1633" width="280" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="P6_f1_di" bpmnElement="P6_f1">
+        <di:waypoint x="800" y="234" />
+        <di:waypoint x="800" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P6_f2_di" bpmnElement="P6_f2">
+        <di:waypoint x="800" y="400" />
+        <di:waypoint x="800" y="450" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P6_f3_di" bpmnElement="P6_f3">
+        <di:waypoint x="800" y="530" />
+        <di:waypoint x="800" y="650" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="675" y="571" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P6_f4_di" bpmnElement="P6_f4">
+        <di:waypoint x="800" y="770" />
+        <di:waypoint x="800" y="920" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P6_f5_di" bpmnElement="P6_f5">
+        <di:waypoint x="840" y="490" />
+        <di:waypoint x="1530" y="490" />
+        <di:waypoint x="1530" y="1185" />
+        <di:waypoint x="1485" y="1185" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1270" y="451" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P6_f6_di" bpmnElement="P6_f6">
+        <di:waypoint x="760" y="960" />
+        <di:waypoint x="320" y="960" />
+        <di:waypoint x="320" y="1125" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="380" y="921" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P6_f7_di" bpmnElement="P6_f7">
+        <di:waypoint x="840" y="960" />
+        <di:waypoint x="1280" y="960" />
+        <di:waypoint x="1280" y="1125" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="910" y="981" width="320" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P6_f8_di" bpmnElement="P6_f8">
+        <di:waypoint x="320" y="1245" />
+        <di:waypoint x="320" y="1355" />
+        <di:waypoint x="760" y="1355" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P6_f9_di" bpmnElement="P6_f9">
+        <di:waypoint x="1280" y="1245" />
+        <di:waypoint x="1280" y="1355" />
+        <di:waypoint x="840" y="1355" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P6_f10_di" bpmnElement="P6_f10">
+        <di:waypoint x="800" y="1395" />
+        <di:waypoint x="800" y="1455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P6_f11_di" bpmnElement="P6_f11">
+        <di:waypoint x="800" y="1575" />
+        <di:waypoint x="800" y="1625" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
